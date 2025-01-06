@@ -67,5 +67,5 @@ button:focus {
 .form__error {
   display: block;
   font-size: 0.85em;
-  color: #c00;
+  color: rgb(0, 37, 204);
 }

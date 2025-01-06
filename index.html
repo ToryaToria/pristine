@@ -21,11 +21,42 @@
         id="nickname"
         required
         placeholder="Кексик"
-        minlength="2"
+        minlength="5"
         maxlength="50"
         data-pristine-required-message="Укажите имя питомца"
-        data-pristine-minlength-message="Минимум 2 символа"
+        data-pristine-minlength-message="Минимум 5 символов"
         data-pristine-maxlength-message="Максимум 50 символов"
+
+        pattern="/[a-z]+$/i" 
+        data-pristine-pattern-message="только латиница!"
+      >
+    </p>
+
+    <!-- data-pristine-type-message="Это точно не email"     !!!! НЕ РАБОТАЕТ!!!-->
+
+    <p class="form__item">
+      <label for="email">Ваш мейл</label>
+      <br>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        required
+        data-pristine-required-message="Укажите email"
+        data-pristine-email-message="Это не email"
+      >
+    </p>
+
+    <p class="form__item">
+      <label for="email1">Повторите Ваш мейл</label>
+      <br>
+      <input
+        type="email1"
+        name="email1"
+        id="email1"
+        
+        data-pristine-equals="#email"
+        data-pristine-equals-message="поля не совпадают!"
       >
     </p>
 
@@ -43,6 +74,14 @@
         name="amount"
         id="amount"
         placeholder="10"
+
+   min="3"
+   max="7"
+        data-pristine-min-message ="не меньше 3!"
+        data-pristine-max-message ="не больше 7!"
+
+        data-pristine-number ="Это не цифра"
+
       >
     </p>
 
